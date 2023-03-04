@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: rgb(10, 10, 10);
+        }
+        .contant{
+            position: relative;
+            display: flex;
+        }
+        .contant .box{
+            position: relative;
+            width: 520px;
+            height: 400px;
+            background: rgb(202, 39, 39);
+            margin: 0 20px;
+            border-radius: 20px;
+            background: linear-gradient(45deg, rgb(154, 33, 235) 25%,yellow 25% , yellow 50%,  rgb(154, 33, 235)50%,
+             rgb(154, 33, 235) 75% , yellow 75% , yellow 100%);
+            background-size: 40px 40px ;
+            filter: grayscale(1);
+            animation:animateBG .5s linear infinite ;
+            animation-play-state: paused;
+            transition: filter 1s;
+            display :flex;
+            justify-content: center;
+        }
+         .contant .box:hover{
+            animation-play-state: running;
+            filter: grayscale(0);
+         }
+         .contant .box img{
+            position: absolute;
+            bottom: 0;
+            height: 90%;
+            transition: height .5s;
+        }
+        .contant .box:hover img{
+            height: 500px;
+        }
+        @keyframes animateBG
+        {
+        
+                0%
+                {
+                    background-position:0;
+                }
+                100%
+                {
+                    background-position:40px;
+                }
+            }
+            .contant .box:nth-child(2){
+                
+                background-size: 40px 40px ;
+                /* background: linear-gradient(45deg, red 25%, yellow 25%, red 50%, yellow 50%, red 75% , yellow 75% , red 100% ); */
+            }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="contant">
+    <div class="box">
+        <img src="img3/-5827917347183246143_120.jpg">
+    </div>
+    <div class="box">
+        <img src="img3/-5827917347183246144_120.jpg">
+    </div>
+    </div>
+</body>
+</html>
